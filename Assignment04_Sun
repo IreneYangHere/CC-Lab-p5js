@@ -1,0 +1,29 @@
+function setup() {
+  createCanvas(600, 600);
+
+  }
+
+function draw() {
+  background(228,246,248);
+    drawSun();  
+}
+
+function drawSun() {
+
+  fill(245, 187, 87);
+  stroke(245, 187, 87);
+  push();
+  translate(100, 80);
+  rotate(radians(frameCount / 2));
+  ellipse(0, 0, 60, 60);
+  line(0, -60, 0, -40);
+  line(0, 40, 0, 60);
+  line(-45, -45, -30, -30);
+  line(45, -45, 30, -30);
+  line(-60, 0, -40, 0);
+  line(40, 0, 60, 0);
+  line(-45, 45, -30, 30);
+  line(45, 45, 30, 30);
+  pop();
+  noFill();
+}
