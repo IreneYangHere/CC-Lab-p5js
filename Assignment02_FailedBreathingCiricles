@@ -1,0 +1,56 @@
+var c1, c2;
+let diameter;
+let angle = 0;
+
+
+function setup() {
+  createCanvas(700, 600);
+  //渐变背景
+  c1 = color(255);
+  c2 = color(0);
+  setGradient(c1, c2);
+  
+
+  //同心圆
+  var x = 100;
+  var y = 300;
+  var circles = 16;
+  for (var total = 0; total < circles; total = total+1) {
+    var diameter = (circles-total) * 30;
+    fill(total * 10);
+    ellipse(x,y, diameter, diameter);
+    noStroke();
+}
+  
+  //breathing circles
+  diameter = height - 10;
+  noStroke();
+  fill(255, 204, 0);
+  
+}
+
+//渐变背景
+function setGradient(c1, c2) {
+  noFill();
+  for (var y = 0; y < height; y++) {
+    var inter = map(y, 0, height, 0, 1);
+    var c = lerpColor(c1, c2, inter);
+    stroke(c);
+    line(0, y, width, y);
+  }
+
+//breathing circles
+function draw() {
+  let d1 = 10 + (sin(angle) * diameter) / 2 + diameter / 2;
+  let d2 = 10 + (sin(angle + PI / 2) * diameter) / 2 + diameter / 2;
+  let d3 = 100 + (sin(angle + PI) * diameter) / 2 + diameter / 2;
+
+  ellipse(0, height / 2, d1, d1);
+  ellipse(width / 2, height / 2, d2, d2);
+  ellipse(width, height / 2, d3, d3);
+
+  angle += 0.02;
+}
+
+
+}
