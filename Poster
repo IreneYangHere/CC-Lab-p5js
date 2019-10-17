@@ -1,0 +1,54 @@
+function setup() {
+  createCanvas(400, 600);
+}
+
+function draw() {
+  background(254,247,159);
+  fill(236,17,97);
+  rect(10,10, 380, 580);
+  noStroke();
+  fill(249,168,201);
+  rect(30,0, 370, 570);
+  noStroke();
+  fill(4,132,181);
+  rect(40,10, 350, 550);
+  noStroke();
+  fill(255);
+  ellipse(70, 70, 30, 30);
+  ellipse(70, 140, 30, 30);
+  ellipse(70, 210, 30, 30);
+  ellipse(70, 280, 30, 30);
+  ellipse(70, 350, 30, 30);
+  ellipse(70, 420, 30, 30);
+  ellipse(70, 490, 30, 30);
+  ellipse(140, 50, 30, 30);
+  ellipse(140, 120, 30, 30);
+  ellipse(140, 190, 30, 30);
+  ellipse(140, 260, 30, 30);
+  ellipse(140, 330, 30, 30);
+  ellipse(140, 400, 30, 30);
+  ellipse(140, 470, 30, 30);
+  ellipse(140, 540, 30, 30);
+  fill(255);
+  rect(135,0, 350, 550);
+  noStroke();
+  fill(0);
+    for (var s=135; s<400; s = s+20){ 
+  	rect(s, 0, 10, 550);
+    }
+  fill(169,212,166);
+  triangle(135,450, 235, 450, 235, 550);
+  fill(249,168,201);
+  rect(200,0, 200, 300);
+  noStroke();
+  fill(0,124,188);
+  rect(210,150, 180, 140);
+  noStroke();
+  fill(254,247,159);
+  rect(300,0, 100, 250);
+  noStroke();
+  fill(0);
+  textSize(30);
+  fill(0);
+  text("FEET IN THE CLOUD", 300, 10, 80, 200);
+}
