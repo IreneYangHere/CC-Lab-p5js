@@ -1,0 +1,46 @@
+var a = 0;
+var b = 0;
+
+function setup() { 
+  createCanvas(400, 400);
+
+} 
+
+function draw() { 
+  background(255);
+  fill(210,180,156);
+  rect(0,0,400,400);
+  noStroke();
+  
+  fill(235,220,178);
+  rect(400,0,400,400);
+  noStroke();
+  
+  fill(239,232,220);
+  rect(0,400,400,400);
+  noStroke();
+  
+  fill(179,146,131);
+  rect(400,400,400,400);
+  noStroke();
+  
+  rectMode(CENTER);
+  translate(width/4, height/4);
+  rotate(a);
+  fill(255);
+  rect(0, 0, 50,50);
+  // line(0, 0, 0, height/8);
+  a = a + 0.01;
+  noStroke();
+  
+  rectMode(CENTER);
+  translate(width/4*2, height/4);
+  rotate(b);
+  fill(255);
+  rect(0, 0, 50,50);
+  // line(0, 0, 0, height/8);
+  b = b + 0.01;
+  noStroke();
+  
+}
+
